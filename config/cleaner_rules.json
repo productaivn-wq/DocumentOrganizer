@@ -1,0 +1,193 @@
+{
+  "version": "3.3.1",
+  "name": "DocumentOrganizer Workspace & Session Cleaner Rules",
+  "description": "Declarative clean-room path and pattern recipes for multi-project workspace hygiene, developer cache reclamation, and agent session scratch lifecycle management.",
+  "inviolable_paths": [
+    "NTUSER.DAT",
+    ".ssh",
+    ".system_generated/logs",
+    ".config",
+    ".gitconfig"
+  ],
+  "inviolable_patterns": [
+    "*.git*",
+    "SKILL.md",
+    "AGENTS.md",
+    "CLAUDE.md",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE",
+    "hot.md",
+    "log.md",
+    "task.md",
+    "walkthrough.md",
+    "implementation_plan.md",
+    "transcript*.jsonl",
+    "manifest.json",
+    "ARCHITECTURE.md",
+    "version.json",
+    "*.lnk"
+  ],
+  "recipes": {
+    "python": {
+      "description": "Python bytecode, compilation artifacts, and linter caches",
+      "directories": [
+        "__pycache__",
+        ".pytest_cache",
+        ".ruff_cache",
+        ".mypy_cache"
+      ],
+      "file_patterns": [
+        "*.pyc",
+        "*.pyo"
+      ],
+      "risk_tier": "tier_1_safe"
+    },
+    "project_build_caches": {
+      "description": "Multi-project workspace test coverage and intermediate build artifacts",
+      "directories": [
+        "__pycache__",
+        ".pytest_cache",
+        ".ruff_cache",
+        ".mypy_cache",
+        ".tox"
+      ],
+      "file_patterns": [
+        "*.pyc",
+        "*.pyo",
+        "*.coverage",
+        ".coverage"
+      ],
+      "risk_tier": "tier_1_safe"
+    },
+    "project_loose_debris": {
+      "description": "Stray test scans and temporary scratch files in project roots",
+      "file_patterns": [
+        "scan.json",
+        "*.tmp.json"
+      ],
+      "risk_tier": "tier_1_safe"
+    },
+    "conversation_scratch": {
+      "description": "Disposable session scratch subdirectories (headless browser profiles, temporary test frames)",
+      "target_subdirs": [
+        "playwright_profile",
+        "cdp_chrome",
+        "chrome_junc",
+        "edge_junc",
+        "edge_session",
+        "chrome_session",
+        "chrome_profile",
+        "edge_profile",
+        "rendered_scenes",
+        "test_video",
+        "frames",
+        "pytest_*"
+      ],
+      "file_patterns": [
+        "plan_*.json",
+        "extracted_*.json",
+        "slice_*.json",
+        "*.tmp"
+      ],
+      "risk_tier": "tier_1_safe"
+    },
+    "browser": {
+      "description": "Ephemeral browser test profiles and partial download debris",
+      "directories": [
+        ".browser-test-profile",
+        "playwright-traces",
+        "test-results"
+      ],
+      "file_patterns": [
+        "*.crdownload"
+      ],
+      "risk_tier": "tier_1_safe"
+    },
+    "editor": {
+      "description": "Ephemeral IDE session diagnostics and workspace crash logs",
+      "directories": [
+        ".ide-logs"
+      ],
+      "file_patterns": [
+        "*.log.tmp",
+        "dump_*.log"
+      ],
+      "risk_tier": "tier_1_safe"
+    },
+    "crashdumps": {
+      "description": "Application post-crash memory dumps",
+      "directories": [
+        "%LOCALAPPDATA%/CrashDumps"
+      ],
+      "file_patterns": [
+        "*.dmp",
+        "*.mdmp"
+      ],
+      "risk_tier": "tier_1_safe"
+    },
+    "temp": {
+      "description": "User temporary files and ephemeral buffers",
+      "directories": [
+        "%LOCALAPPDATA%/Temp"
+      ],
+      "file_patterns": [
+        "*.tmp",
+        "*.temp",
+        "tmp*"
+      ],
+      "default_ttl_days": 3,
+      "risk_tier": "tier_1_safe"
+    },
+    "packages": {
+      "description": "Developer package manager installation caches",
+      "directories": [
+        ".bun/install/cache",
+        "%LOCALAPPDATA%/pip/cache",
+        "%LOCALAPPDATA%/npm-cache"
+      ],
+      "risk_tier": "tier_2_dev_cache"
+    },
+    "pytest_system_temp": {
+      "description": "Ephemeral pytest session folders in system Temp",
+      "glob_directories": [
+        "%LOCALAPPDATA%/Temp/pytest-of-*"
+      ],
+      "risk_tier": "tier_1_safe"
+    },
+    "agent_worktrees": {
+      "description": "Orphaned temporary git worktree sandboxes",
+      "directories": [
+        ".worktrees/tmp"
+      ],
+      "risk_tier": "tier_1_safe"
+    },
+    "brain_media_and_logs": {
+      "description": "Closed session temporary media buffers and background task logs",
+      "target_subdirs": [
+        ".tempmediaStorage"
+      ],
+      "truncate_log_subdirs": [
+        ".system_generated/tasks"
+      ],
+      "risk_tier": "tier_1_safe"
+    },
+    "raw_ingestion_staging": {
+      "description": "Post-ingestion staging folders",
+      "directories": [
+        ".raw/staging",
+        "00_INBOX/staging"
+      ],
+      "risk_tier": "tier_1_safe"
+    },
+    "sqlite": {
+      "description": "Compaction, defragmentation, and WAL sidecar vacuuming for SQLite databases",
+      "file_patterns": [
+        "*.sqlite",
+        "*.db"
+      ],
+      "action": "vacuum",
+      "risk_tier": "tier_1_safe"
+    }
+  }
+}

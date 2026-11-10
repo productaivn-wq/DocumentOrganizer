@@ -1,0 +1,62 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "document-organizer"
+version = "3.3.1"
+description = "Governance-driven 5-zone MECE workspace file organization, clean-room hygiene, legal vault management, and Knowledge Graph lineage engine."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+authors = [
+    { name = "productaivn-wq" }
+]
+keywords = [
+    "document-organizer",
+    "file-governance",
+    "mece",
+    "johnny-decimal",
+    "para",
+    "knowledge-graph",
+    "graphrag",
+    "obsidian",
+    "langgraph",
+    "workspace-hygiene",
+]
+dependencies = [
+    "pydantic>=2.0",
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+graph = ["langgraph>=0.2"]
+watch = ["watchdog>=4.0", "psutil>=5.9"]
+dev = ["pytest>=8.0", "ruff>=0.5"]
+
+[project.scripts]
+document-organizer = "DocumentOrganizer.__main__:main"
+
+[project.urls]
+Homepage = "https://github.com/productaivn-wq/DocumentOrganizer"
+Repository = "https://github.com/productaivn-wq/DocumentOrganizer"
+Issues = "https://github.com/productaivn-wq/DocumentOrganizer/issues"
+
+[tool.setuptools.package-dir]
+DocumentOrganizer = "."
+"DocumentOrganizer.core" = "core"
+"DocumentOrganizer.scripts" = "scripts"
+"DocumentOrganizer.src" = "src"
+
+[tool.setuptools]
+packages = [
+    "DocumentOrganizer",
+    "DocumentOrganizer.core",
+    "DocumentOrganizer.scripts",
+    "DocumentOrganizer.src",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-q"

@@ -1,0 +1,842 @@
+[
+  {
+    "tc_id": "TC_UC_DOCUMENTORGANIZER_001",
+    "fr_ref": "FR-001",
+    "scenario_ref": "TC-DOCUMENTORGANIZER-S01",
+    "type": "Happy Path",
+    "parameters": [
+      "string"
+    ],
+    "risk_group": "RG6",
+    "input_payload": {
+      "skill": "DocumentOrganizer",
+      "target_entity": "FR-001",
+      "test_vector_type": "Happy Path",
+      "boundary_offset": 0
+    },
+    "expected_outcome": {
+      "status": "success",
+      "code": 200,
+      "error_boundary_contained": true
+    }
+  },
+  {
+    "tc_id": "TC_UC_DOCUMENTORGANIZER_002",
+    "fr_ref": "FR-001",
+    "scenario_ref": "TC-DOCUMENTORGANIZER-S02",
+    "type": "EP: String Partition 1",
+    "parameters": [
+      "string"
+    ],
+    "risk_group": "RG6",
+    "input_payload": {
+      "skill": "DocumentOrganizer",
+      "target_entity": "FR-001",
+      "test_vector_type": "EP: String Partition 1",
+      "boundary_offset": 1
+    },
+    "expected_outcome": {
+      "status": "handled_error",
+      "code": 400,
+      "error_boundary_contained": true
+    }
+  },
+  {
+    "tc_id": "TC_UC_DOCUMENTORGANIZER_003",
+    "fr_ref": "FR-001",
+    "scenario_ref": "TC-DOCUMENTORGANIZER-S03",
+    "type": "EP: String Partition 2",
+    "parameters": [
+      "string"
+    ],
+    "risk_group": "RG6",
+    "input_payload": {
+      "skill": "DocumentOrganizer",
+      "target_entity": "FR-001",
+      "test_vector_type": "EP: String Partition 2",
+      "boundary_offset": 2
+    },
+    "expected_outcome": {
+      "status": "handled_error",
+      "code": 400,
+      "error_boundary_contained": true
+    }
+  },
+  {
+    "tc_id": "TC_UC_DOCUMENTORGANIZER_004",
+    "fr_ref": "FR-001",
+    "scenario_ref": "TC-DOCUMENTORGANIZER-S04",
+    "type": "EP: String Partition 3",
+    "parameters": [
+      "string"
+    ],
+    "risk_group": "RG6",
+    "input_payload": {
+      "skill": "DocumentOrganizer",
+      "target_entity": "FR-001",
+      "test_vector_type": "EP: String Partition 3",
+      "boundary_offset": 3
+    },
+    "expected_outcome": {
+      "status": "handled_error",
+      "code": 400,
+      "error_boundary_contained": true
+    }
+  },
+  {
+    "tc_id": "TC_UC_DOCUMENTORGANIZER_005",
+    "fr_ref": "FR-001",
+    "scenario_ref": "TC-DOCUMENTORGANIZER-S05",
+    "type": "BVA: String Boundary 1",
+    "parameters": [
+      "string"
+    ],
+    "risk_group": "RG6",
+    "input_payload": {
+      "skill": "DocumentOrganizer",
+      "target_entity": "FR-001",
+      "test_vector_type": "BVA: String Boundary 1",
+      "boundary_offset": 4
+    },
+    "expected_outcome": {
+      "status": "success",
+      "code": 400,
+      "error_boundary_contained": true
+    }
+  },
+  {
+    "tc_id": "TC_UC_DOCUMENTORGANIZER_006",
+    "fr_ref": "FR-001",
+    "scenario_ref": "TC-DOCUMENTORGANIZER-S06",
+    "type": "BVA: String Boundary 2",
+    "parameters": [
+      "string"
+    ],
+    "risk_group": "RG6",
+    "input_payload": {
+      "skill": "DocumentOrganizer",
+      "target_entity": "FR-001",
+      "test_vector_type": "BVA: String Boundary 2",
+      "boundary_offset": 5
+    },
+    "expected_outcome": {
+      "status": "success",
+      "code": 400,
+      "error_boundary_contained": true
+    }
+  },
+  {
+    "tc_id": "TC_UC_DOCUMENTORGANIZER_007",
+    "fr_ref": "FR-001",
+    "scenario_ref": "TC-DOCUMENTORGANIZER-S07",
+    "type": "RG6: Execution Timeout",
+    "parameters": [
+      "string"
+    ],
+    "risk_group": "RG6",
+    "input_payload": {
+      "skill": "DocumentOrganizer",
+      "target_entity": "FR-001",
+      "test_vector_type": "RG6: Execution Timeout",
+      "boundary_offset": 6
+    },
+    "expected_outcome": {
+      "status": "handled_error",
+      "code": 400,
+      "error_boundary_contained": true
+    }
+  },
+  {
+    "tc_id": "TC_UC_DOCUMENTORGANIZER_008",
+    "fr_ref": "FR-001",
+    "scenario_ref": "TC-DOCUMENTORGANIZER-S08",
+    "type": "RG6: Circuit Breaker Trip",
+    "parameters": [
+      "string"
+    ],
+    "risk_group": "RG6",
+    "input_payload": {
+      "skill": "DocumentOrganizer",
+      "target_entity": "FR-001",
+      "test_vector_type": "RG6: Circuit Breaker Trip",
+      "boundary_offset": 7
+    },
+    "expected_outcome": {
+      "status": "handled_error",
+      "code": 400,
+      "error_boundary_contained": true
+    }
+  },
+  {
+    "tc_id": "TC_UC_DOCUMENTORGANIZER_009",
+    "fr_ref": "FR-002",
+    "scenario_ref": "TC-DOCUMENTORGANIZER-S09",
+    "type": "Happy Path",
+    "parameters": [
+      "string"
+    ],
+    "risk_group": "RG6",
+    "input_payload": {
+      "skill": "DocumentOrganizer",
+      "target_entity": "FR-002",
+      "test_vector_type": "Happy Path",
+      "boundary_offset": 0
+    },
+    "expected_outcome": {
+      "status": "success",
+      "code": 200,
+      "error_boundary_contained": true
+    }
+  },
+  {
+    "tc_id": "TC_UC_DOCUMENTORGANIZER_010",
+    "fr_ref": "FR-002",
+    "scenario_ref": "TC-DOCUMENTORGANIZER-S10",
+    "type": "EP: String Partition 1",
+    "parameters": [
+      "string"
+    ],
+    "risk_group": "RG6",
+    "input_payload": {
+      "skill": "DocumentOrganizer",
+      "target_entity": "FR-002",
+      "test_vector_type": "EP: String Partition 1",
+      "boundary_offset": 1
+    },
+    "expected_outcome": {
+      "status": "handled_error",
+      "code": 400,
+      "error_boundary_contained": true
+    }
+  },
+  {
+    "tc_id": "TC_UC_DOCUMENTORGANIZER_011",
+    "fr_ref": "FR-002",
+    "scenario_ref": "TC-DOCUMENTORGANIZER-S11",
+    "type": "EP: String Partition 2",
+    "parameters": [
+      "string"
+    ],
+    "risk_group": "RG6",
+    "input_payload": {
+      "skill": "DocumentOrganizer",
+      "target_entity": "FR-002",
+      "test_vector_type": "EP: String Partition 2",
+      "boundary_offset": 2
+    },
+    "expected_outcome": {
+      "status": "handled_error",
+      "code": 400,
+      "error_boundary_contained": true
+    }
+  },
+  {
+    "tc_id": "TC_UC_DOCUMENTORGANIZER_012",
+    "fr_ref": "FR-002",
+    "scenario_ref": "TC-DOCUMENTORGANIZER-S12",
+    "type": "EP: String Partition 3",
+    "parameters": [
+      "string"
+    ],
+    "risk_group": "RG6",
+    "input_payload": {
+      "skill": "DocumentOrganizer",
+      "target_entity": "FR-002",
+      "test_vector_type": "EP: String Partition 3",
+      "boundary_offset": 3
+    },
+    "expected_outcome": {
+      "status": "handled_error",
+      "code": 400,
+      "error_boundary_contained": true
+    }
+  },
+  {
+    "tc_id": "TC_UC_DOCUMENTORGANIZER_013",
+    "fr_ref": "FR-002",
+    "scenario_ref": "TC-DOCUMENTORGANIZER-S13",
+    "type": "BVA: String Boundary 1",
+    "parameters": [
+      "string"
+    ],
+    "risk_group": "RG6",
+    "input_payload": {
+      "skill": "DocumentOrganizer",
+      "target_entity": "FR-002",
+      "test_vector_type": "BVA: String Boundary 1",
+      "boundary_offset": 4
+    },
+    "expected_outcome": {
+      "status": "success",
+      "code": 400,
+      "error_boundary_contained": true
+    }
+  },
+  {
+    "tc_id": "TC_UC_DOCUMENTORGANIZER_014",
+    "fr_ref": "FR-002",
+    "scenario_ref": "TC-DOCUMENTORGANIZER-S14",
+    "type": "BVA: String Boundary 2",
+    "parameters": [
+      "string"
+    ],
+    "risk_group": "RG6",
+    "input_payload": {
+      "skill": "DocumentOrganizer",
+      "target_entity": "FR-002",
+      "test_vector_type": "BVA: String Boundary 2",
+      "boundary_offset": 5
+    },
+    "expected_outcome": {
+      "status": "success",
+      "code": 400,
+      "error_boundary_contained": true
+    }
+  },
+  {
+    "tc_id": "TC_UC_DOCUMENTORGANIZER_015",
+    "fr_ref": "FR-002",
+    "scenario_ref": "TC-DOCUMENTORGANIZER-S15",
+    "type": "RG6: Execution Timeout",
+    "parameters": [
+      "string"
+    ],
+    "risk_group": "RG6",
+    "input_payload": {
+      "skill": "DocumentOrganizer",
+      "target_entity": "FR-002",
+      "test_vector_type": "RG6: Execution Timeout",
+      "boundary_offset": 6
+    },
+    "expected_outcome": {
+      "status": "handled_error",
+      "code": 400,
+      "error_boundary_contained": true
+    }
+  },
+  {
+    "tc_id": "TC_UC_DOCUMENTORGANIZER_016",
+    "fr_ref": "FR-002",
+    "scenario_ref": "TC-DOCUMENTORGANIZER-S16",
+    "type": "RG6: Circuit Breaker Trip",
+    "parameters": [
+      "string"
+    ],
+    "risk_group": "RG6",
+    "input_payload": {
+      "skill": "DocumentOrganizer",
+      "target_entity": "FR-002",
+      "test_vector_type": "RG6: Circuit Breaker Trip",
+      "boundary_offset": 7
+    },
+    "expected_outcome": {
+      "status": "handled_error",
+      "code": 400,
+      "error_boundary_contained": true
+    }
+  },
+  {
+    "tc_id": "TC_UC_DOCUMENTORGANIZER_017",
+    "fr_ref": "FR-003",
+    "scenario_ref": "TC-DOCUMENTORGANIZER-S17",
+    "type": "Happy Path",
+    "parameters": [
+      "numeric"
+    ],
+    "risk_group": "RG6",
+    "input_payload": {
+      "skill": "DocumentOrganizer",
+      "target_entity": "FR-003",
+      "test_vector_type": "Happy Path",
+      "boundary_offset": 0
+    },
+    "expected_outcome": {
+      "status": "success",
+      "code": 200,
+      "error_boundary_contained": true
+    }
+  },
+  {
+    "tc_id": "TC_UC_DOCUMENTORGANIZER_018",
+    "fr_ref": "FR-003",
+    "scenario_ref": "TC-DOCUMENTORGANIZER-S18",
+    "type": "EP: Numeric Partition 1",
+    "parameters": [
+      "numeric"
+    ],
+    "risk_group": "RG6",
+    "input_payload": {
+      "skill": "DocumentOrganizer",
+      "target_entity": "FR-003",
+      "test_vector_type": "EP: Numeric Partition 1",
+      "boundary_offset": 1
+    },
+    "expected_outcome": {
+      "status": "handled_error",
+      "code": 400,
+      "error_boundary_contained": true
+    }
+  },
+  {
+    "tc_id": "TC_UC_DOCUMENTORGANIZER_019",
+    "fr_ref": "FR-003",
+    "scenario_ref": "TC-DOCUMENTORGANIZER-S19",
+    "type": "EP: Numeric Partition 2",
+    "parameters": [
+      "numeric"
+    ],
+    "risk_group": "RG6",
+    "input_payload": {
+      "skill": "DocumentOrganizer",
+      "target_entity": "FR-003",
+      "test_vector_type": "EP: Numeric Partition 2",
+      "boundary_offset": 2
+    },
+    "expected_outcome": {
+      "status": "handled_error",
+      "code": 400,
+      "error_boundary_contained": true
+    }
+  },
+  {
+    "tc_id": "TC_UC_DOCUMENTORGANIZER_020",
+    "fr_ref": "FR-003",
+    "scenario_ref": "TC-DOCUMENTORGANIZER-S20",
+    "type": "EP: Numeric Partition 3",
+    "parameters": [
+      "numeric"
+    ],
+    "risk_group": "RG6",
+    "input_payload": {
+      "skill": "DocumentOrganizer",
+      "target_entity": "FR-003",
+      "test_vector_type": "EP: Numeric Partition 3",
+      "boundary_offset": 3
+    },
+    "expected_outcome": {
+      "status": "handled_error",
+      "code": 400,
+      "error_boundary_contained": true
+    }
+  },
+  {
+    "tc_id": "TC_UC_DOCUMENTORGANIZER_021",
+    "fr_ref": "FR-003",
+    "scenario_ref": "TC-DOCUMENTORGANIZER-S21",
+    "type": "BVA: Numeric Boundary 1",
+    "parameters": [
+      "numeric"
+    ],
+    "risk_group": "RG6",
+    "input_payload": {
+      "skill": "DocumentOrganizer",
+      "target_entity": "FR-003",
+      "test_vector_type": "BVA: Numeric Boundary 1",
+      "boundary_offset": 4
+    },
+    "expected_outcome": {
+      "status": "success",
+      "code": 400,
+      "error_boundary_contained": true
+    }
+  },
+  {
+    "tc_id": "TC_UC_DOCUMENTORGANIZER_022",
+    "fr_ref": "FR-003",
+    "scenario_ref": "TC-DOCUMENTORGANIZER-S22",
+    "type": "BVA: Numeric Boundary 2",
+    "parameters": [
+      "numeric"
+    ],
+    "risk_group": "RG6",
+    "input_payload": {
+      "skill": "DocumentOrganizer",
+      "target_entity": "FR-003",
+      "test_vector_type": "BVA: Numeric Boundary 2",
+      "boundary_offset": 5
+    },
+    "expected_outcome": {
+      "status": "success",
+      "code": 400,
+      "error_boundary_contained": true
+    }
+  },
+  {
+    "tc_id": "TC_UC_DOCUMENTORGANIZER_023",
+    "fr_ref": "FR-003",
+    "scenario_ref": "TC-DOCUMENTORGANIZER-S23",
+    "type": "RG6: Execution Timeout",
+    "parameters": [
+      "numeric"
+    ],
+    "risk_group": "RG6",
+    "input_payload": {
+      "skill": "DocumentOrganizer",
+      "target_entity": "FR-003",
+      "test_vector_type": "RG6: Execution Timeout",
+      "boundary_offset": 6
+    },
+    "expected_outcome": {
+      "status": "handled_error",
+      "code": 400,
+      "error_boundary_contained": true
+    }
+  },
+  {
+    "tc_id": "TC_UC_DOCUMENTORGANIZER_024",
+    "fr_ref": "FR-003",
+    "scenario_ref": "TC-DOCUMENTORGANIZER-S24",
+    "type": "RG6: Circuit Breaker Trip",
+    "parameters": [
+      "numeric"
+    ],
+    "risk_group": "RG6",
+    "input_payload": {
+      "skill": "DocumentOrganizer",
+      "target_entity": "FR-003",
+      "test_vector_type": "RG6: Circuit Breaker Trip",
+      "boundary_offset": 7
+    },
+    "expected_outcome": {
+      "status": "handled_error",
+      "code": 400,
+      "error_boundary_contained": true
+    }
+  },
+  {
+    "tc_id": "TC_UC_DOCUMENTORGANIZER_025",
+    "fr_ref": "FR-004",
+    "scenario_ref": "TC-DOCUMENTORGANIZER-S25",
+    "type": "Happy Path",
+    "parameters": [
+      "string"
+    ],
+    "risk_group": "RG6",
+    "input_payload": {
+      "skill": "DocumentOrganizer",
+      "target_entity": "FR-004",
+      "test_vector_type": "Happy Path",
+      "boundary_offset": 0
+    },
+    "expected_outcome": {
+      "status": "success",
+      "code": 200,
+      "error_boundary_contained": true
+    }
+  },
+  {
+    "tc_id": "TC_UC_DOCUMENTORGANIZER_026",
+    "fr_ref": "FR-004",
+    "scenario_ref": "TC-DOCUMENTORGANIZER-S26",
+    "type": "EP: String Partition 1",
+    "parameters": [
+      "string"
+    ],
+    "risk_group": "RG6",
+    "input_payload": {
+      "skill": "DocumentOrganizer",
+      "target_entity": "FR-004",
+      "test_vector_type": "EP: String Partition 1",
+      "boundary_offset": 1
+    },
+    "expected_outcome": {
+      "status": "handled_error",
+      "code": 400,
+      "error_boundary_contained": true
+    }
+  },
+  {
+    "tc_id": "TC_UC_DOCUMENTORGANIZER_027",
+    "fr_ref": "FR-004",
+    "scenario_ref": "TC-DOCUMENTORGANIZER-S27",
+    "type": "EP: String Partition 2",
+    "parameters": [
+      "string"
+    ],
+    "risk_group": "RG6",
+    "input_payload": {
+      "skill": "DocumentOrganizer",
+      "target_entity": "FR-004",
+      "test_vector_type": "EP: String Partition 2",
+      "boundary_offset": 2
+    },
+    "expected_outcome": {
+      "status": "handled_error",
+      "code": 400,
+      "error_boundary_contained": true
+    }
+  },
+  {
+    "tc_id": "TC_UC_DOCUMENTORGANIZER_028",
+    "fr_ref": "FR-004",
+    "scenario_ref": "TC-DOCUMENTORGANIZER-S28",
+    "type": "EP: String Partition 3",
+    "parameters": [
+      "string"
+    ],
+    "risk_group": "RG6",
+    "input_payload": {
+      "skill": "DocumentOrganizer",
+      "target_entity": "FR-004",
+      "test_vector_type": "EP: String Partition 3",
+      "boundary_offset": 3
+    },
+    "expected_outcome": {
+      "status": "handled_error",
+      "code": 400,
+      "error_boundary_contained": true
+    }
+  },
+  {
+    "tc_id": "TC_UC_DOCUMENTORGANIZER_029",
+    "fr_ref": "FR-004",
+    "scenario_ref": "TC-DOCUMENTORGANIZER-S29",
+    "type": "BVA: String Boundary 1",
+    "parameters": [
+      "string"
+    ],
+    "risk_group": "RG6",
+    "input_payload": {
+      "skill": "DocumentOrganizer",
+      "target_entity": "FR-004",
+      "test_vector_type": "BVA: String Boundary 1",
+      "boundary_offset": 4
+    },
+    "expected_outcome": {
+      "status": "success",
+      "code": 400,
+      "error_boundary_contained": true
+    }
+  },
+  {
+    "tc_id": "TC_UC_DOCUMENTORGANIZER_030",
+    "fr_ref": "FR-004",
+    "scenario_ref": "TC-DOCUMENTORGANIZER-S30",
+    "type": "BVA: String Boundary 2",
+    "parameters": [
+      "string"
+    ],
+    "risk_group": "RG6",
+    "input_payload": {
+      "skill": "DocumentOrganizer",
+      "target_entity": "FR-004",
+      "test_vector_type": "BVA: String Boundary 2",
+      "boundary_offset": 5
+    },
+    "expected_outcome": {
+      "status": "success",
+      "code": 400,
+      "error_boundary_contained": true
+    }
+  },
+  {
+    "tc_id": "TC_UC_DOCUMENTORGANIZER_031",
+    "fr_ref": "FR-004",
+    "scenario_ref": "TC-DOCUMENTORGANIZER-S31",
+    "type": "RG6: Execution Timeout",
+    "parameters": [
+      "string"
+    ],
+    "risk_group": "RG6",
+    "input_payload": {
+      "skill": "DocumentOrganizer",
+      "target_entity": "FR-004",
+      "test_vector_type": "RG6: Execution Timeout",
+      "boundary_offset": 6
+    },
+    "expected_outcome": {
+      "status": "handled_error",
+      "code": 400,
+      "error_boundary_contained": true
+    }
+  },
+  {
+    "tc_id": "TC_UC_DOCUMENTORGANIZER_032",
+    "fr_ref": "FR-004",
+    "scenario_ref": "TC-DOCUMENTORGANIZER-S32",
+    "type": "RG6: Circuit Breaker Trip",
+    "parameters": [
+      "string"
+    ],
+    "risk_group": "RG6",
+    "input_payload": {
+      "skill": "DocumentOrganizer",
+      "target_entity": "FR-004",
+      "test_vector_type": "RG6: Circuit Breaker Trip",
+      "boundary_offset": 7
+    },
+    "expected_outcome": {
+      "status": "handled_error",
+      "code": 400,
+      "error_boundary_contained": true
+    }
+  },
+  {
+    "tc_id": "TC_UC_DOCUMENTORGANIZER_033",
+    "fr_ref": "FR-005",
+    "scenario_ref": "TC-DOCUMENTORGANIZER-S33",
+    "type": "Happy Path",
+    "parameters": [
+      "string"
+    ],
+    "risk_group": "RG6",
+    "input_payload": {
+      "skill": "DocumentOrganizer",
+      "target_entity": "FR-005",
+      "test_vector_type": "Happy Path",
+      "boundary_offset": 0
+    },
+    "expected_outcome": {
+      "status": "success",
+      "code": 200,
+      "error_boundary_contained": true
+    }
+  },
+  {
+    "tc_id": "TC_UC_DOCUMENTORGANIZER_034",
+    "fr_ref": "FR-005",
+    "scenario_ref": "TC-DOCUMENTORGANIZER-S34",
+    "type": "EP: String Partition 1",
+    "parameters": [
+      "string"
+    ],
+    "risk_group": "RG6",
+    "input_payload": {
+      "skill": "DocumentOrganizer",
+      "target_entity": "FR-005",
+      "test_vector_type": "EP: String Partition 1",
+      "boundary_offset": 1
+    },
+    "expected_outcome": {
+      "status": "handled_error",
+      "code": 400,
+      "error_boundary_contained": true
+    }
+  },
+  {
+    "tc_id": "TC_UC_DOCUMENTORGANIZER_035",
+    "fr_ref": "FR-005",
+    "scenario_ref": "TC-DOCUMENTORGANIZER-S35",
+    "type": "EP: String Partition 2",
+    "parameters": [
+      "string"
+    ],
+    "risk_group": "RG6",
+    "input_payload": {
+      "skill": "DocumentOrganizer",
+      "target_entity": "FR-005",
+      "test_vector_type": "EP: String Partition 2",
+      "boundary_offset": 2
+    },
+    "expected_outcome": {
+      "status": "handled_error",
+      "code": 400,
+      "error_boundary_contained": true
+    }
+  },
+  {
+    "tc_id": "TC_UC_DOCUMENTORGANIZER_036",
+    "fr_ref": "FR-005",
+    "scenario_ref": "TC-DOCUMENTORGANIZER-S36",
+    "type": "EP: String Partition 3",
+    "parameters": [
+      "string"
+    ],
+    "risk_group": "RG6",
+    "input_payload": {
+      "skill": "DocumentOrganizer",
+      "target_entity": "FR-005",
+      "test_vector_type": "EP: String Partition 3",
+      "boundary_offset": 3
+    },
+    "expected_outcome": {
+      "status": "handled_error",
+      "code": 400,
+      "error_boundary_contained": true
+    }
+  },
+  {
+    "tc_id": "TC_UC_DOCUMENTORGANIZER_037",
+    "fr_ref": "FR-005",
+    "scenario_ref": "TC-DOCUMENTORGANIZER-S37",
+    "type": "BVA: String Boundary 1",
+    "parameters": [
+      "string"
+    ],
+    "risk_group": "RG6",
+    "input_payload": {
+      "skill": "DocumentOrganizer",
+      "target_entity": "FR-005",
+      "test_vector_type": "BVA: String Boundary 1",
+      "boundary_offset": 4
+    },
+    "expected_outcome": {
+      "status": "success",
+      "code": 400,
+      "error_boundary_contained": true
+    }
+  },
+  {
+    "tc_id": "TC_UC_DOCUMENTORGANIZER_038",
+    "fr_ref": "FR-005",
+    "scenario_ref": "TC-DOCUMENTORGANIZER-S38",
+    "type": "BVA: String Boundary 2",
+    "parameters": [
+      "string"
+    ],
+    "risk_group": "RG6",
+    "input_payload": {
+      "skill": "DocumentOrganizer",
+      "target_entity": "FR-005",
+      "test_vector_type": "BVA: String Boundary 2",
+      "boundary_offset": 5
+    },
+    "expected_outcome": {
+      "status": "success",
+      "code": 400,
+      "error_boundary_contained": true
+    }
+  },
+  {
+    "tc_id": "TC_UC_DOCUMENTORGANIZER_039",
+    "fr_ref": "FR-005",
+    "scenario_ref": "TC-DOCUMENTORGANIZER-S39",
+    "type": "RG6: Execution Timeout",
+    "parameters": [
+      "string"
+    ],
+    "risk_group": "RG6",
+    "input_payload": {
+      "skill": "DocumentOrganizer",
+      "target_entity": "FR-005",
+      "test_vector_type": "RG6: Execution Timeout",
+      "boundary_offset": 6
+    },
+    "expected_outcome": {
+      "status": "handled_error",
+      "code": 400,
+      "error_boundary_contained": true
+    }
+  },
+  {
+    "tc_id": "TC_UC_DOCUMENTORGANIZER_040",
+    "fr_ref": "FR-005",
+    "scenario_ref": "TC-DOCUMENTORGANIZER-S40",
+    "type": "RG6: Circuit Breaker Trip",
+    "parameters": [
+      "string"
+    ],
+    "risk_group": "RG6",
+    "input_payload": {
+      "skill": "DocumentOrganizer",
+      "target_entity": "FR-005",
+      "test_vector_type": "RG6: Circuit Breaker Trip",
+      "boundary_offset": 7
+    },
+    "expected_outcome": {
+      "status": "handled_error",
+      "code": 400,
+      "error_boundary_contained": true
+    }
+  }
+]

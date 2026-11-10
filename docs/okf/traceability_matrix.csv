@@ -1,0 +1,2 @@
+uc_flow,description,gherkin_scenario,function_rule,test_data,status
+UC-001.1,"Main Flow",TC-UC-001-S01,FR-001,TC-001-VALID,Draft

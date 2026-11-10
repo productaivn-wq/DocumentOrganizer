@@ -1,0 +1,11 @@
+{
+  "name": "document-organizer-traceability",
+  "profile": "tabular-data-package",
+  "resources": [
+    {
+      "name": "traceability_matrix",
+      "path": "traceability_matrix.csv",
+      "schema": "okf_schema.json"
+    }
+  ]
+}

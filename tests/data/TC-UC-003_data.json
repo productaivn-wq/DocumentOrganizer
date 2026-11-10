@@ -1,0 +1,140 @@
+{
+  "metadata": {
+    "skill": "DocumentOrganizer",
+    "uc_reference": "UC-003",
+    "uc_title": "Operational Guardrails & Reorganization Rules (EBQC Distilled)",
+    "generated": "2026-08-18",
+    "generator": "DirectAssetGenerator v2.0"
+  },
+  "test_cases": [
+    {
+      "id": "TC-001-VALID",
+      "description": "Valid invocation of DocumentOrganizer 'Operational Guardrails & Reorganization Rules (EBQC Distilled)' - Happy Path",
+      "type": "positive",
+      "fr_ref": "FR-002",
+      "scenario_ref": "TC-UC-003-S01",
+      "input": {
+        "command": "execute",
+        "skill": "DocumentOrganizer",
+        "uc": "UC-003",
+        "params": {}
+      },
+      "expected": {
+        "status": "success",
+        "error": null
+      }
+    },
+    {
+      "id": "TC-002-ALT-INVALID_INPUT___SYSTEM_VALIDAT",
+      "description": "Alternate flow for DocumentOrganizer 'Operational Guardrails & Reorganization Rules (EBQC Distilled)' - Invalid Input \u2014 System validates inputs and returns a structured error with field-level guidance. Gherkin: `@TC-UC-003-S02`",
+      "type": "negative",
+      "fr_ref": "FR-002",
+      "scenario_ref": "TC-UC-003-S02",
+      "input": {
+        "command": "execute",
+        "skill": "DocumentOrganizer",
+        "uc": "UC-003",
+        "params": {
+          "trigger_alternate_flow": "Invalid Input \u2014 System validates inputs and returns a structured error with field-level guidance. Gherkin: `@TC-UC-003-S02`"
+        }
+      },
+      "expected": {
+        "status": "error",
+        "error_type": "ValidationError"
+      }
+    },
+    {
+      "id": "TC-003-ALT-DEPENDENCY_UNAVAILABLE___SYSTE",
+      "description": "Alternate flow for DocumentOrganizer 'Operational Guardrails & Reorganization Rules (EBQC Distilled)' - Dependency Unavailable \u2014 System retries up to 3 times with exponential backoff, then falls back. Gherkin: `@TC-UC-003-S03`",
+      "type": "edge",
+      "fr_ref": "FR-002",
+      "scenario_ref": "TC-UC-003-S03",
+      "input": {
+        "command": "execute",
+        "skill": "DocumentOrganizer",
+        "uc": "UC-003",
+        "params": {
+          "trigger_alternate_flow": "Dependency Unavailable \u2014 System retries up to 3 times with exponential backoff, then falls back. Gherkin: `@TC-UC-003-S03`"
+        }
+      },
+      "expected": {
+        "status": "degraded",
+        "error_type": "DependencyError"
+      }
+    },
+    {
+      "id": "TC-004-ALT-TIMEOUT___SYSTEM_TERMINATES_EX",
+      "description": "Alternate flow for DocumentOrganizer 'Operational Guardrails & Reorganization Rules (EBQC Distilled)' - Timeout \u2014 System terminates execution after configured timeout and reports partial results. Gherkin: `@TC-UC-003-S04`",
+      "type": "edge",
+      "fr_ref": "FR-002",
+      "scenario_ref": "TC-UC-003-S04",
+      "input": {
+        "command": "execute",
+        "skill": "DocumentOrganizer",
+        "uc": "UC-003",
+        "params": {
+          "trigger_alternate_flow": "Timeout \u2014 System terminates execution after configured timeout and reports partial results. Gherkin: `@TC-UC-003-S04`"
+        }
+      },
+      "expected": {
+        "status": "timeout",
+        "error_type": "TimeoutError"
+      }
+    },
+    {
+      "id": "TC-005-INVALID-INPUT",
+      "description": "Invalid input for DocumentOrganizer 'Operational Guardrails & Reorganization Rules (EBQC Distilled)'",
+      "type": "negative",
+      "fr_ref": "FR-002",
+      "scenario_ref": "TC-UC-003-S05",
+      "input": {
+        "command": "execute",
+        "skill": "DocumentOrganizer",
+        "uc": "UC-003",
+        "params": {
+          "invalid_key": true
+        }
+      },
+      "expected": {
+        "status": "error",
+        "error_type": "ValidationError"
+      }
+    },
+    {
+      "id": "TC-006-EDGE-EMPTY",
+      "description": "Empty parameters for DocumentOrganizer 'Operational Guardrails & Reorganization Rules (EBQC Distilled)'",
+      "type": "edge",
+      "fr_ref": "FR-001",
+      "scenario_ref": "TC-UC-003-S06",
+      "input": {
+        "command": "execute",
+        "skill": "DocumentOrganizer",
+        "uc": "UC-003",
+        "params": null
+      },
+      "expected": {
+        "status": "error",
+        "error_type": "MissingParameterError"
+      }
+    },
+    {
+      "id": "TC-007-EDGE-TIMEOUT",
+      "description": "Timeout scenario for DocumentOrganizer 'Operational Guardrails & Reorganization Rules (EBQC Distilled)'",
+      "type": "edge",
+      "fr_ref": "NFR-004",
+      "scenario_ref": "TC-UC-003-ERR01",
+      "input": {
+        "command": "execute",
+        "skill": "DocumentOrganizer",
+        "uc": "UC-003",
+        "params": {
+          "timeout_ms": 1
+        }
+      },
+      "expected": {
+        "status": "timeout",
+        "error_type": "TimeoutError"
+      }
+    }
+  ]
+}

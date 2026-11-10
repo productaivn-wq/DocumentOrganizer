@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0",
+  "name": "DocumentOrganizer",
+  "version": "3.3.1",
+  "description": "Authoritative Single Source of Truth (SSOT) for document, multimedia photo, and digital asset lifecycle management across 5-zone MECE workspaces, combined with workspace hygiene, scratch cache reclamation, SQLite compaction, and zero-desktop governance.",
+  "triggers": {
+    "keywords": [
+      "document",
+      "organizer",
+      "documentorganizer",
+      "file-governance"
+    ],
+    "slash_commands": [
+      "/DocumentOrganizer"
+    ],
+    "intent_patterns": [
+      "execute documentorganizer",
+      "run documentorganizer workflow",
+      "organize workspace files"
+    ]
+  },
+  "capabilities": [
+    "automated-queue-sorting",
+    "zero-desktop-file-governance",
+    "workspace-cache-cleanup",
+    "personal-and-legal-vault-management"
+  ],
+  "entry_points": {
+    "main_script": "__main__.py",
+    "cli": "document-organizer"
+  },
+  "mcp_transport": "native",
+  "requires_cdp": false
+}

@@ -1,0 +1,74 @@
+# Zone Presets for DocumentOrganizer
+
+presets:
+
+  mece_universal:
+    description: "Universal 5-stage lifecycle structure: Queue -> Planning -> Executing -> Reference -> Archive."
+    zones:
+      - name: "00_QUEUE"
+        purpose: "Queue: Incoming waiting area. Unsorted, raw files pending triage."
+      - name: "10_PLANNING"
+        purpose: "Planning: Proposals, drafts, specs, and work being scoped."
+      - name: "20_EXECUTING"
+        purpose: "Executing: Active sprint deliverables, in-progress work, and live SOPs."
+      - name: "30_REFERENCE"
+        purpose: "Reference: Shared assets, blueprints, templates, and knowledge library."
+      - name: "40_ARCHIVE"
+        purpose: "Archive: Completed deliverables and historical records preserved read-only."
+    aliases:
+      "00_INBOX": "00_QUEUE"
+      "10_SPECS": "10_PLANNING"
+      "20_DELIVERABLES": "20_EXECUTING"
+      "30_REFERENCE_AND_SOPS": "30_REFERENCE"
+      "10_ACTIVE_TIMEBOUND": "10_PLANNING"
+      "20_ACTIVE_CONTINUOUS": "20_EXECUTING"
+    numbering: "00-40 Strict Indexing"
+    exclude_patterns:
+      - ".git"
+      - ".svn"
+      - "node_modules"
+      - "__pycache__"
+      - "$RECYCLE.BIN"
+      - "System Volume Information"
+      - "dist"
+      - "build"
+      - ".next"
+
+  personal_legal_vault:
+    description: "Personal and enterprise legal document vault with semantic versioning and local dispatch."
+    zones:
+      - name: "01_identity_personal"
+        purpose: "National ID, passports, driver licenses, and personal profile metadata."
+      - name: "02_business_registrations"
+        purpose: "Business registration certificates, amendments, tax IDs, and official filings organized by semantic versions (v1.0, v2.0, v2.1, v3.0)."
+      - name: "03_premises_and_contracts"
+        purpose: "Property leases, office location agreements, commercial contracts, and NDAs."
+      - name: "04_banking_and_finance"
+        purpose: "Bank account confirmations, merchant profiles, payment QR codes, and financial contacts."
+      - name: "05_dispatch_registry"
+        purpose: "Append-only JSONL transmission audit logs and delivery receipts."
+    numbering: "01-05 Strict Vault Indexing"
+    exclude_patterns:
+      - ".git"
+      - "__pycache__"
+      - "*.tmp"
+
+  engineering_spec_driven:
+    description: "Spec-driven 5-zone structure mapping directly to software engineering lifecycles."
+    zones:
+      - name: "00_INBOX"
+        purpose: "Intake queue for unsorted notes, drops, and raw inputs."
+      - name: "10_SPECS"
+        purpose: "Upstream specifications (SPEC-*), Use Cases (UC-*), and architecture contracts."
+      - name: "20_DELIVERABLES"
+        purpose: "Active sprint deliverables, implementation reports, and test evidence."
+      - name: "30_REFERENCE"
+        purpose: "Reference standards, domain blueprints, governance rules, and SOPs."
+      - name: "40_ARCHIVE"
+        purpose: "Historical records and superseded versions retained read-only."
+    numbering: "00-40 Strict Indexing"
+    exclude_patterns:
+      - ".git"
+      - ".venv"
+      - "node_modules"
+      - "__pycache__"

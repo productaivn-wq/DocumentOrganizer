@@ -1,0 +1,1102 @@
+{
+  "metadata": {
+    "skill": "DocumentOrganizer",
+    "generated": "2026-05-18",
+    "function_count": 38
+  },
+  "functions": {
+    "cleanup_directory": {
+      "uc_id": "UC-001",
+      "gherkin_id": "TC-001",
+      "file": "cleanup.py",
+      "params": [
+        "target_dir",
+        "archive_root",
+        "days",
+        "dry_run"
+      ],
+      "test_cases": [
+        {
+          "id": "TC-001-VALID",
+          "type": "positive",
+          "description": "Valid call to cleanup_directory()",
+          "input": {
+            "target_dir": null,
+            "archive_root": null,
+            "days": null,
+            "dry_run": null
+          },
+          "expected": {
+            "raises": false,
+            "result": "<non-null>"
+          }
+        },
+        {
+          "id": "TC-001-INVALID",
+          "type": "negative",
+          "description": "Invalid params for cleanup_directory()",
+          "input": {
+            "target_dir": "__INVALID__",
+            "archive_root": "__INVALID__",
+            "days": "__INVALID__",
+            "dry_run": "__INVALID__"
+          },
+          "expected": {
+            "raises": true,
+            "exception_type": "Exception"
+          }
+        }
+      ]
+    },
+    "main": {
+      "uc_id": "UC-035",
+      "gherkin_id": "TC-035",
+      "file": "watch.py",
+      "params": [],
+      "test_cases": [
+        {
+          "id": "TC-035-VALID",
+          "type": "positive",
+          "description": "Valid call to main()",
+          "input": {},
+          "expected": {
+            "raises": false,
+            "result": "<non-null>"
+          }
+        },
+        {
+          "id": "TC-035-INVALID",
+          "type": "negative",
+          "description": "Invalid params for main()",
+          "input": {},
+          "expected": {
+            "raises": true,
+            "exception_type": "Exception"
+          }
+        }
+      ]
+    },
+    "get_folder_fingerprint": {
+      "uc_id": "UC-003",
+      "gherkin_id": "TC-003",
+      "file": "consolidate.py",
+      "params": [
+        "directory"
+      ],
+      "test_cases": [
+        {
+          "id": "TC-003-VALID",
+          "type": "positive",
+          "description": "Valid call to get_folder_fingerprint()",
+          "input": {
+            "directory": null
+          },
+          "expected": {
+            "raises": false,
+            "result": "<non-null>"
+          }
+        },
+        {
+          "id": "TC-003-INVALID",
+          "type": "negative",
+          "description": "Invalid params for get_folder_fingerprint()",
+          "input": {
+            "directory": "__INVALID__"
+          },
+          "expected": {
+            "raises": true,
+            "exception_type": "Exception"
+          }
+        }
+      ]
+    },
+    "calculate_overlap": {
+      "uc_id": "UC-004",
+      "gherkin_id": "TC-004",
+      "file": "consolidate.py",
+      "params": [
+        "fp1",
+        "fp2"
+      ],
+      "test_cases": [
+        {
+          "id": "TC-004-VALID",
+          "type": "positive",
+          "description": "Valid call to calculate_overlap()",
+          "input": {
+            "fp1": null,
+            "fp2": null
+          },
+          "expected": {
+            "raises": false,
+            "result": "<non-null>"
+          }
+        },
+        {
+          "id": "TC-004-INVALID",
+          "type": "negative",
+          "description": "Invalid params for calculate_overlap()",
+          "input": {
+            "fp1": "__INVALID__",
+            "fp2": "__INVALID__"
+          },
+          "expected": {
+            "raises": true,
+            "exception_type": "Exception"
+          }
+        }
+      ]
+    },
+    "find_merge_candidates": {
+      "uc_id": "UC-005",
+      "gherkin_id": "TC-005",
+      "file": "consolidate.py",
+      "params": [
+        "root",
+        "threshold"
+      ],
+      "test_cases": [
+        {
+          "id": "TC-005-VALID",
+          "type": "positive",
+          "description": "Valid call to find_merge_candidates()",
+          "input": {
+            "root": null,
+            "threshold": null
+          },
+          "expected": {
+            "raises": false,
+            "result": "<non-null>"
+          }
+        },
+        {
+          "id": "TC-005-INVALID",
+          "type": "negative",
+          "description": "Invalid params for find_merge_candidates()",
+          "input": {
+            "root": "__INVALID__",
+            "threshold": "__INVALID__"
+          },
+          "expected": {
+            "raises": true,
+            "exception_type": "Exception"
+          }
+        }
+      ]
+    },
+    "get_hash": {
+      "uc_id": "UC-007",
+      "gherkin_id": "TC-007",
+      "file": "consolidate_workspace.py",
+      "params": [
+        "file_path"
+      ],
+      "test_cases": [
+        {
+          "id": "TC-007-VALID",
+          "type": "positive",
+          "description": "Valid call to get_hash()",
+          "input": {
+            "file_path": null
+          },
+          "expected": {
+            "raises": false,
+            "result": "<non-null>"
+          }
+        },
+        {
+          "id": "TC-007-INVALID",
+          "type": "negative",
+          "description": "Invalid params for get_hash()",
+          "input": {
+            "file_path": "__INVALID__"
+          },
+          "expected": {
+            "raises": true,
+            "exception_type": "Exception"
+          }
+        }
+      ]
+    },
+    "is_auto_generated": {
+      "uc_id": "UC-008",
+      "gherkin_id": "TC-008",
+      "file": "consolidate_workspace.py",
+      "params": [
+        "file_path"
+      ],
+      "test_cases": [
+        {
+          "id": "TC-008-VALID",
+          "type": "positive",
+          "description": "Valid call to is_auto_generated()",
+          "input": {
+            "file_path": null
+          },
+          "expected": {
+            "raises": false,
+            "result": "<non-null>"
+          }
+        },
+        {
+          "id": "TC-008-INVALID",
+          "type": "negative",
+          "description": "Invalid params for is_auto_generated()",
+          "input": {
+            "file_path": "__INVALID__"
+          },
+          "expected": {
+            "raises": true,
+            "exception_type": "Exception"
+          }
+        }
+      ]
+    },
+    "normalize_name": {
+      "uc_id": "UC-009",
+      "gherkin_id": "TC-009",
+      "file": "consolidate_workspace.py",
+      "params": [
+        "name"
+      ],
+      "test_cases": [
+        {
+          "id": "TC-009-VALID",
+          "type": "positive",
+          "description": "Valid call to normalize_name()",
+          "input": {
+            "name": null
+          },
+          "expected": {
+            "raises": false,
+            "result": "<non-null>"
+          }
+        },
+        {
+          "id": "TC-009-INVALID",
+          "type": "negative",
+          "description": "Invalid params for normalize_name()",
+          "input": {
+            "name": "__INVALID__"
+          },
+          "expected": {
+            "raises": true,
+            "exception_type": "Exception"
+          }
+        }
+      ]
+    },
+    "aggressive_move": {
+      "uc_id": "UC-010",
+      "gherkin_id": "TC-010",
+      "file": "consolidate_workspace.py",
+      "params": [
+        "src",
+        "dest"
+      ],
+      "test_cases": [
+        {
+          "id": "TC-010-VALID",
+          "type": "positive",
+          "description": "Valid call to aggressive_move()",
+          "input": {
+            "src": null,
+            "dest": null
+          },
+          "expected": {
+            "raises": false,
+            "result": "<non-null>"
+          }
+        },
+        {
+          "id": "TC-010-INVALID",
+          "type": "negative",
+          "description": "Invalid params for aggressive_move()",
+          "input": {
+            "src": "__INVALID__",
+            "dest": "__INVALID__"
+          },
+          "expected": {
+            "raises": true,
+            "exception_type": "Exception"
+          }
+        }
+      ]
+    },
+    "emit_progress": {
+      "uc_id": "UC-012",
+      "gherkin_id": "TC-012",
+      "file": "logger.py",
+      "params": [
+        "source",
+        "phase",
+        "message",
+        "level",
+        "progress",
+        "log_file"
+      ],
+      "test_cases": [
+        {
+          "id": "TC-012-VALID",
+          "type": "positive",
+          "description": "Valid call to emit_progress()",
+          "input": {
+            "source": null,
+            "phase": null,
+            "message": null,
+            "level": null,
+            "progress": null,
+            "log_file": null
+          },
+          "expected": {
+            "raises": false,
+            "result": "<non-null>"
+          }
+        },
+        {
+          "id": "TC-012-INVALID",
+          "type": "negative",
+          "description": "Invalid params for emit_progress()",
+          "input": {
+            "source": "__INVALID__",
+            "phase": "__INVALID__",
+            "message": "__INVALID__",
+            "level": "__INVALID__",
+            "progress": "__INVALID__",
+            "log_file": "__INVALID__"
+          },
+          "expected": {
+            "raises": true,
+            "exception_type": "Exception"
+          }
+        }
+      ]
+    },
+    "enforce_naming": {
+      "uc_id": "UC-013",
+      "gherkin_id": "TC-013",
+      "file": "organizer.py",
+      "params": [
+        "filename"
+      ],
+      "test_cases": [
+        {
+          "id": "TC-013-VALID",
+          "type": "positive",
+          "description": "Valid call to enforce_naming()",
+          "input": {
+            "filename": null
+          },
+          "expected": {
+            "raises": false,
+            "result": "<non-null>"
+          }
+        },
+        {
+          "id": "TC-013-INVALID",
+          "type": "negative",
+          "description": "Invalid params for enforce_naming()",
+          "input": {
+            "filename": "__INVALID__"
+          },
+          "expected": {
+            "raises": true,
+            "exception_type": "Exception"
+          }
+        }
+      ]
+    },
+    "safe_move": {
+      "uc_id": "UC-014",
+      "gherkin_id": "TC-014",
+      "file": "organizer.py",
+      "params": [
+        "src",
+        "dest_dir",
+        "dry_run",
+        "rename_log",
+        "move_log",
+        "dup_log",
+        "target_root",
+        "custom_name"
+      ],
+      "test_cases": [
+        {
+          "id": "TC-014-VALID",
+          "type": "positive",
+          "description": "Valid call to safe_move()",
+          "input": {
+            "src": null,
+            "dest_dir": null,
+            "dry_run": null,
+            "rename_log": null,
+            "move_log": null,
+            "dup_log": null,
+            "target_root": null,
+            "custom_name": null
+          },
+          "expected": {
+            "raises": false,
+            "result": "<non-null>"
+          }
+        },
+        {
+          "id": "TC-014-INVALID",
+          "type": "negative",
+          "description": "Invalid params for safe_move()",
+          "input": {
+            "src": "__INVALID__",
+            "dest_dir": "__INVALID__",
+            "dry_run": "__INVALID__",
+            "rename_log": "__INVALID__",
+            "move_log": "__INVALID__",
+            "dup_log": "__INVALID__",
+            "target_root": "__INVALID__",
+            "custom_name": "__INVALID__"
+          },
+          "expected": {
+            "raises": true,
+            "exception_type": "Exception"
+          }
+        }
+      ]
+    },
+    "detect_conflicts": {
+      "uc_id": "UC-015",
+      "gherkin_id": "TC-015",
+      "file": "organizer.py",
+      "params": [
+        "tasks",
+        "zone"
+      ],
+      "test_cases": [
+        {
+          "id": "TC-015-VALID",
+          "type": "positive",
+          "description": "Valid call to detect_conflicts()",
+          "input": {
+            "tasks": null,
+            "zone": null
+          },
+          "expected": {
+            "raises": false,
+            "result": "<non-null>"
+          }
+        },
+        {
+          "id": "TC-015-INVALID",
+          "type": "negative",
+          "description": "Invalid params for detect_conflicts()",
+          "input": {
+            "tasks": "__INVALID__",
+            "zone": "__INVALID__"
+          },
+          "expected": {
+            "raises": true,
+            "exception_type": "Exception"
+          }
+        }
+      ]
+    },
+    "execute_zone": {
+      "uc_id": "UC-016",
+      "gherkin_id": "TC-016",
+      "file": "organizer.py",
+      "params": [
+        "zone",
+        "job_dir",
+        "dry_run",
+        "rename_log",
+        "move_log",
+        "dup_log",
+        "target_root",
+        "tasks"
+      ],
+      "test_cases": [
+        {
+          "id": "TC-016-VALID",
+          "type": "positive",
+          "description": "Valid call to execute_zone()",
+          "input": {
+            "zone": null,
+            "job_dir": null,
+            "dry_run": null,
+            "rename_log": null,
+            "move_log": null,
+            "dup_log": null,
+            "target_root": null,
+            "tasks": null
+          },
+          "expected": {
+            "raises": false,
+            "result": "<non-null>"
+          }
+        },
+        {
+          "id": "TC-016-INVALID",
+          "type": "negative",
+          "description": "Invalid params for execute_zone()",
+          "input": {
+            "zone": "__INVALID__",
+            "job_dir": "__INVALID__",
+            "dry_run": "__INVALID__",
+            "rename_log": "__INVALID__",
+            "move_log": "__INVALID__",
+            "dup_log": "__INVALID__",
+            "target_root": "__INVALID__",
+            "tasks": "__INVALID__"
+          },
+          "expected": {
+            "raises": true,
+            "exception_type": "Exception"
+          }
+        }
+      ]
+    },
+    "run_global_dedup": {
+      "uc_id": "UC-017",
+      "gherkin_id": "TC-017",
+      "file": "organizer.py",
+      "params": [
+        "dedup_entries",
+        "target_root",
+        "dry_run",
+        "dup_log"
+      ],
+      "test_cases": [
+        {
+          "id": "TC-017-VALID",
+          "type": "positive",
+          "description": "Valid call to run_global_dedup()",
+          "input": {
+            "dedup_entries": null,
+            "target_root": null,
+            "dry_run": null,
+            "dup_log": null
+          },
+          "expected": {
+            "raises": false,
+            "result": "<non-null>"
+          }
+        },
+        {
+          "id": "TC-017-INVALID",
+          "type": "negative",
+          "description": "Invalid params for run_global_dedup()",
+          "input": {
+            "dedup_entries": "__INVALID__",
+            "target_root": "__INVALID__",
+            "dry_run": "__INVALID__",
+            "dup_log": "__INVALID__"
+          },
+          "expected": {
+            "raises": true,
+            "exception_type": "Exception"
+          }
+        }
+      ]
+    },
+    "run_execute": {
+      "uc_id": "UC-018",
+      "gherkin_id": "TC-018",
+      "file": "organizer.py",
+      "params": [
+        "job_dir",
+        "max_concurrent",
+        "dry_run",
+        "target_override"
+      ],
+      "test_cases": [
+        {
+          "id": "TC-018-VALID",
+          "type": "positive",
+          "description": "Valid call to run_execute()",
+          "input": {
+            "job_dir": null,
+            "max_concurrent": null,
+            "dry_run": null,
+            "target_override": null
+          },
+          "expected": {
+            "raises": false,
+            "result": "<non-null>"
+          }
+        },
+        {
+          "id": "TC-018-INVALID",
+          "type": "negative",
+          "description": "Invalid params for run_execute()",
+          "input": {
+            "job_dir": "__INVALID__",
+            "max_concurrent": "__INVALID__",
+            "dry_run": "__INVALID__",
+            "target_override": "__INVALID__"
+          },
+          "expected": {
+            "raises": true,
+            "exception_type": "Exception"
+          }
+        }
+      ]
+    },
+    "generate_rename_suggestion": {
+      "uc_id": "UC-020",
+      "gherkin_id": "TC-020",
+      "file": "plan.py",
+      "params": [
+        "filepath",
+        "content",
+        "existing_folders",
+        "target_root"
+      ],
+      "test_cases": [
+        {
+          "id": "TC-020-VALID",
+          "type": "positive",
+          "description": "Valid call to generate_rename_suggestion()",
+          "input": {
+            "filepath": null,
+            "content": null,
+            "existing_folders": null,
+            "target_root": null
+          },
+          "expected": {
+            "raises": false,
+            "result": "<non-null>"
+          }
+        },
+        {
+          "id": "TC-020-INVALID",
+          "type": "negative",
+          "description": "Invalid params for generate_rename_suggestion()",
+          "input": {
+            "filepath": "__INVALID__",
+            "content": "__INVALID__",
+            "existing_folders": "__INVALID__",
+            "target_root": "__INVALID__"
+          },
+          "expected": {
+            "raises": true,
+            "exception_type": "Exception"
+          }
+        }
+      ]
+    },
+    "generate_tasks": {
+      "uc_id": "UC-021",
+      "gherkin_id": "TC-021",
+      "file": "plan.py",
+      "params": [
+        "scan_file",
+        "out_dir"
+      ],
+      "test_cases": [
+        {
+          "id": "TC-021-VALID",
+          "type": "positive",
+          "description": "Valid call to generate_tasks()",
+          "input": {
+            "scan_file": null,
+            "out_dir": null
+          },
+          "expected": {
+            "raises": false,
+            "result": "<non-null>"
+          }
+        },
+        {
+          "id": "TC-021-INVALID",
+          "type": "negative",
+          "description": "Invalid params for generate_tasks()",
+          "input": {
+            "scan_file": "__INVALID__",
+            "out_dir": "__INVALID__"
+          },
+          "expected": {
+            "raises": true,
+            "exception_type": "Exception"
+          }
+        }
+      ]
+    },
+    "write_readmes": {
+      "uc_id": "UC-022",
+      "gherkin_id": "TC-022",
+      "file": "readme_writer.py",
+      "params": [
+        "target",
+        "dry_run",
+        "overwrite",
+        "tasks_path",
+        "fail_on_error",
+        "output_dir",
+        "scan_json"
+      ],
+      "test_cases": [
+        {
+          "id": "TC-022-VALID",
+          "type": "positive",
+          "description": "Valid call to write_readmes()",
+          "input": {
+            "target": null,
+            "dry_run": null,
+            "overwrite": null,
+            "tasks_path": null,
+            "fail_on_error": null,
+            "output_dir": null,
+            "scan_json": null
+          },
+          "expected": {
+            "raises": false,
+            "result": "<non-null>"
+          }
+        },
+        {
+          "id": "TC-022-INVALID",
+          "type": "negative",
+          "description": "Invalid params for write_readmes()",
+          "input": {
+            "target": "__INVALID__",
+            "dry_run": "__INVALID__",
+            "overwrite": "__INVALID__",
+            "tasks_path": "__INVALID__",
+            "fail_on_error": "__INVALID__",
+            "output_dir": "__INVALID__",
+            "scan_json": "__INVALID__"
+          },
+          "expected": {
+            "raises": true,
+            "exception_type": "Exception"
+          }
+        }
+      ]
+    },
+    "rescue_zone": {
+      "uc_id": "UC-024",
+      "gherkin_id": "TC-024",
+      "file": "organizer.py",
+      "params": [
+        "zone_path"
+      ],
+      "test_cases": [
+        {
+          "id": "TC-024-VALID",
+          "type": "positive",
+          "description": "Valid call to rescue_zone()",
+          "input": {
+            "zone_path": null
+          },
+          "expected": {
+            "raises": false,
+            "result": "<non-null>"
+          }
+        },
+        {
+          "id": "TC-024-INVALID",
+          "type": "negative",
+          "description": "Invalid params for rescue_zone()",
+          "input": {
+            "zone_path": "__INVALID__"
+          },
+          "expected": {
+            "raises": true,
+            "exception_type": "Exception"
+          }
+        }
+      ]
+    },
+    "unnest_folders": {
+      "uc_id": "UC-025",
+      "gherkin_id": "TC-025",
+      "file": "organizer.py",
+      "params": [
+        "zone_path"
+      ],
+      "test_cases": [
+        {
+          "id": "TC-025-VALID",
+          "type": "positive",
+          "description": "Valid call to unnest_folders()",
+          "input": {
+            "zone_path": null
+          },
+          "expected": {
+            "raises": false,
+            "result": "<non-null>"
+          }
+        },
+        {
+          "id": "TC-025-INVALID",
+          "type": "negative",
+          "description": "Invalid params for unnest_folders()",
+          "input": {
+            "zone_path": "__INVALID__"
+          },
+          "expected": {
+            "raises": true,
+            "exception_type": "Exception"
+          }
+        }
+      ]
+    },
+    "scan_directory": {
+      "uc_id": "UC-027",
+      "gherkin_id": "TC-027",
+      "file": "scan.py",
+      "params": [
+        "root",
+        "large_mb",
+        "excludes",
+        "output_arg",
+        "fast",
+        "merge_threshold"
+      ],
+      "test_cases": [
+        {
+          "id": "TC-027-VALID",
+          "type": "positive",
+          "description": "Valid call to scan_directory()",
+          "input": {
+            "root": null,
+            "large_mb": null,
+            "excludes": null,
+            "output_arg": null,
+            "fast": null,
+            "merge_threshold": null
+          },
+          "expected": {
+            "raises": false,
+            "result": "<non-null>"
+          }
+        },
+        {
+          "id": "TC-027-INVALID",
+          "type": "negative",
+          "description": "Invalid params for scan_directory()",
+          "input": {
+            "root": "__INVALID__",
+            "large_mb": "__INVALID__",
+            "excludes": "__INVALID__",
+            "output_arg": "__INVALID__",
+            "fast": "__INVALID__",
+            "merge_threshold": "__INVALID__"
+          },
+          "expected": {
+            "raises": true,
+            "exception_type": "Exception"
+          }
+        }
+      ]
+    },
+    "validate": {
+      "uc_id": "UC-029",
+      "gherkin_id": "TC-029",
+      "file": "validate_tasks.py",
+      "params": [
+        "tasks_path"
+      ],
+      "test_cases": [
+        {
+          "id": "TC-029-VALID",
+          "type": "positive",
+          "description": "Valid call to validate()",
+          "input": {
+            "tasks_path": null
+          },
+          "expected": {
+            "raises": false,
+            "result": "<non-null>"
+          }
+        },
+        {
+          "id": "TC-029-INVALID",
+          "type": "negative",
+          "description": "Invalid params for validate()",
+          "input": {
+            "tasks_path": "__INVALID__"
+          },
+          "expected": {
+            "raises": true,
+            "exception_type": "Exception"
+          }
+        }
+      ]
+    },
+    "verify": {
+      "uc_id": "UC-031",
+      "gherkin_id": "TC-031",
+      "file": "verify.py",
+      "params": [
+        "root",
+        "check_paths"
+      ],
+      "test_cases": [
+        {
+          "id": "TC-031-VALID",
+          "type": "positive",
+          "description": "Valid call to verify()",
+          "input": {
+            "root": null,
+            "check_paths": null
+          },
+          "expected": {
+            "raises": false,
+            "result": "<non-null>"
+          }
+        },
+        {
+          "id": "TC-031-INVALID",
+          "type": "negative",
+          "description": "Invalid params for verify()",
+          "input": {
+            "root": "__INVALID__",
+            "check_paths": "__INVALID__"
+          },
+          "expected": {
+            "raises": true,
+            "exception_type": "Exception"
+          }
+        }
+      ]
+    },
+    "generate_mermaid_mindmap": {
+      "uc_id": "UC-033",
+      "gherkin_id": "TC-033",
+      "file": "visualize.py",
+      "params": [
+        "root",
+        "max_depth"
+      ],
+      "test_cases": [
+        {
+          "id": "TC-033-VALID",
+          "type": "positive",
+          "description": "Valid call to generate_mermaid_mindmap()",
+          "input": {
+            "root": null,
+            "max_depth": null
+          },
+          "expected": {
+            "raises": false,
+            "result": "<non-null>"
+          }
+        },
+        {
+          "id": "TC-033-INVALID",
+          "type": "negative",
+          "description": "Invalid params for generate_mermaid_mindmap()",
+          "input": {
+            "root": "__INVALID__",
+            "max_depth": "__INVALID__"
+          },
+          "expected": {
+            "raises": true,
+            "exception_type": "Exception"
+          }
+        }
+      ]
+    },
+    "on_created": {
+      "uc_id": "UC-036",
+      "gherkin_id": "TC-036",
+      "file": "watch.py",
+      "params": [
+        "event"
+      ],
+      "test_cases": [
+        {
+          "id": "TC-036-VALID",
+          "type": "positive",
+          "description": "Valid call to on_created()",
+          "input": {
+            "event": null
+          },
+          "expected": {
+            "raises": false,
+            "result": "<non-null>"
+          }
+        },
+        {
+          "id": "TC-036-INVALID",
+          "type": "negative",
+          "description": "Invalid params for on_created()",
+          "input": {
+            "event": "__INVALID__"
+          },
+          "expected": {
+            "raises": true,
+            "exception_type": "Exception"
+          }
+        }
+      ]
+    },
+    "on_moved": {
+      "uc_id": "UC-037",
+      "gherkin_id": "TC-037",
+      "file": "watch.py",
+      "params": [
+        "event"
+      ],
+      "test_cases": [
+        {
+          "id": "TC-037-VALID",
+          "type": "positive",
+          "description": "Valid call to on_moved()",
+          "input": {
+            "event": null
+          },
+          "expected": {
+            "raises": false,
+            "result": "<non-null>"
+          }
+        },
+        {
+          "id": "TC-037-INVALID",
+          "type": "negative",
+          "description": "Invalid params for on_moved()",
+          "input": {
+            "event": "__INVALID__"
+          },
+          "expected": {
+            "raises": true,
+            "exception_type": "Exception"
+          }
+        }
+      ]
+    },
+    "process_file": {
+      "uc_id": "UC-038",
+      "gherkin_id": "TC-038",
+      "file": "watch.py",
+      "params": [
+        "file_path"
+      ],
+      "test_cases": [
+        {
+          "id": "TC-038-VALID",
+          "type": "positive",
+          "description": "Valid call to process_file()",
+          "input": {
+            "file_path": null
+          },
+          "expected": {
+            "raises": false,
+            "result": "<non-null>"
+          }
+        },
+        {
+          "id": "TC-038-INVALID",
+          "type": "negative",
+          "description": "Invalid params for process_file()",
+          "input": {
+            "file_path": "__INVALID__"
+          },
+          "expected": {
+            "raises": true,
+            "exception_type": "Exception"
+          }
+        }
+      ]
+    }
+  }
+}

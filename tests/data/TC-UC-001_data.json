@@ -1,0 +1,246 @@
+{
+  "metadata": {
+    "skill": "DocumentOrganizer",
+    "uc_reference": "UC-001",
+    "uc_title": "Core Capabilities",
+    "standard": "IEEE-829",
+    "total_test_cases": 12,
+    "positive_count": 3,
+    "adversarial_count": 9,
+    "bva_7point_covered": true,
+    "inversion_prover_verified": true,
+    "generated": "2026-09-10",
+    "generator": "DirectAssetGenerator v2.2 (5D Test Sizing)"
+  },
+  "test_cases": [
+    {
+      "id": "TC-001-VALID",
+      "description": "Valid invocation of DocumentOrganizer 'Core Capabilities' - Happy Path",
+      "type": "positive",
+      "fr_ref": "FR-002",
+      "scenario_ref": "TC-UC-001-S01",
+      "input": {
+        "command": "execute",
+        "skill": "DocumentOrganizer",
+        "uc": "UC-001",
+        "params": {}
+      },
+      "expected": {
+        "status": "success",
+        "error": null
+      }
+    },
+    {
+      "id": "TC-002-ALT-INVALID_INPUT___SYSTEM_VALIDAT",
+      "description": "Alternate flow for DocumentOrganizer 'Core Capabilities' - Invalid Input \u2014 System validates inputs and returns a structured error with field-level guidance. Gherkin: `@TC-UC-001-S02`",
+      "type": "negative",
+      "fr_ref": "FR-002",
+      "scenario_ref": "TC-UC-001-S02",
+      "input": {
+        "command": "execute",
+        "skill": "DocumentOrganizer",
+        "uc": "UC-001",
+        "params": {
+          "trigger_alternate_flow": "Invalid Input \u2014 System validates inputs and returns a structured error with field-level guidance. Gherkin: `@TC-UC-001-S02`"
+        }
+      },
+      "expected": {
+        "status": "error",
+        "error_type": "ValidationError"
+      }
+    },
+    {
+      "id": "TC-003-ALT-DEPENDENCY_UNAVAILABLE___SYSTE",
+      "description": "Alternate flow for DocumentOrganizer 'Core Capabilities' - Dependency Unavailable \u2014 System retries up to 3 times with exponential backoff, then falls back. Gherkin: `@TC-UC-001-S03`",
+      "type": "edge",
+      "fr_ref": "FR-002",
+      "scenario_ref": "TC-UC-001-S03",
+      "input": {
+        "command": "execute",
+        "skill": "DocumentOrganizer",
+        "uc": "UC-001",
+        "params": {
+          "trigger_alternate_flow": "Dependency Unavailable \u2014 System retries up to 3 times with exponential backoff, then falls back. Gherkin: `@TC-UC-001-S03`"
+        }
+      },
+      "expected": {
+        "status": "degraded",
+        "error_type": "DependencyError"
+      }
+    },
+    {
+      "id": "TC-004-ALT-TIMEOUT___SYSTEM_TERMINATES_EX",
+      "description": "Alternate flow for DocumentOrganizer 'Core Capabilities' - Timeout \u2014 System terminates execution after configured timeout and reports partial results. Gherkin: `@TC-UC-001-S04`",
+      "type": "edge",
+      "fr_ref": "FR-002",
+      "scenario_ref": "TC-UC-001-S04",
+      "input": {
+        "command": "execute",
+        "skill": "DocumentOrganizer",
+        "uc": "UC-001",
+        "params": {
+          "trigger_alternate_flow": "Timeout \u2014 System terminates execution after configured timeout and reports partial results. Gherkin: `@TC-UC-001-S04`"
+        }
+      },
+      "expected": {
+        "status": "timeout",
+        "error_type": "TimeoutError"
+      }
+    },
+    {
+      "id": "TC-005-INVALID-INPUT",
+      "description": "Invalid input for DocumentOrganizer 'Core Capabilities' (7-Point BVA: Malformed)",
+      "type": "negative",
+      "fr_ref": "FR-002",
+      "scenario_ref": "TC-UC-001-S05",
+      "input": {
+        "command": "execute",
+        "skill": "DocumentOrganizer",
+        "uc": "UC-001",
+        "params": {
+          "invalid_key": true
+        }
+      },
+      "expected": {
+        "status": "error",
+        "error_type": "ValidationError"
+      }
+    },
+    {
+      "id": "TC-006-EDGE-EMPTY",
+      "description": "Empty parameters for DocumentOrganizer 'Core Capabilities' (7-Point BVA: Null/Empty)",
+      "type": "edge",
+      "fr_ref": "FR-001",
+      "scenario_ref": "TC-UC-001-S06",
+      "input": {
+        "command": "execute",
+        "skill": "DocumentOrganizer",
+        "uc": "UC-001",
+        "params": null
+      },
+      "expected": {
+        "status": "error",
+        "error_type": "MissingParameterError"
+      }
+    },
+    {
+      "id": "TC-007-BVA-LOW-BOUNDARY",
+      "description": "Lower boundary input parameter for DocumentOrganizer 'Core Capabilities' (7-Point BVA: Point a)",
+      "type": "positive",
+      "fr_ref": "FR-001",
+      "scenario_ref": "TC-UC-001-S07",
+      "input": {
+        "command": "execute",
+        "skill": "DocumentOrganizer",
+        "uc": "UC-001",
+        "params": {
+          "timebox_seconds": 120,
+          "payload_size": 1
+        }
+      },
+      "expected": {
+        "status": "success",
+        "error": null
+      }
+    },
+    {
+      "id": "TC-008-BVA-UNDERFLOW",
+      "description": "Underflow parameter boundary for DocumentOrganizer 'Core Capabilities' (7-Point BVA: Point a - epsilon)",
+      "type": "negative",
+      "fr_ref": "FR-001",
+      "scenario_ref": "TC-UC-001-S08",
+      "input": {
+        "command": "execute",
+        "skill": "DocumentOrganizer",
+        "uc": "UC-001",
+        "params": {
+          "timebox_seconds": 0,
+          "payload_size": -1
+        }
+      },
+      "expected": {
+        "status": "error",
+        "error_type": "BoundaryUnderflowError"
+      }
+    },
+    {
+      "id": "TC-009-BVA-HIGH-BOUNDARY",
+      "description": "Upper boundary input parameter for DocumentOrganizer 'Core Capabilities' (7-Point BVA: Point b)",
+      "type": "positive",
+      "fr_ref": "FR-001",
+      "scenario_ref": "TC-UC-001-S09",
+      "input": {
+        "command": "execute",
+        "skill": "DocumentOrganizer",
+        "uc": "UC-001",
+        "params": {
+          "timebox_seconds": 900,
+          "concurrency": 20
+        }
+      },
+      "expected": {
+        "status": "success",
+        "error": null
+      }
+    },
+    {
+      "id": "TC-010-BVA-OVERFLOW",
+      "description": "Overflow parameter boundary for DocumentOrganizer 'Core Capabilities' (7-Point BVA: Point b + epsilon)",
+      "type": "negative",
+      "fr_ref": "FR-001",
+      "scenario_ref": "TC-UC-001-S10",
+      "input": {
+        "command": "execute",
+        "skill": "DocumentOrganizer",
+        "uc": "UC-001",
+        "params": {
+          "timebox_seconds": 901,
+          "concurrency": 21
+        }
+      },
+      "expected": {
+        "status": "error",
+        "error_type": "BoundaryOverflowError"
+      }
+    },
+    {
+      "id": "TC-011-AUTH-UNAUTHORIZED",
+      "description": "Unauthorized mutation attempt on DocumentOrganizer 'Core Capabilities' (Security Fuzzing)",
+      "type": "negative",
+      "fr_ref": "NFR-005",
+      "scenario_ref": "TC-UC-001-S11",
+      "input": {
+        "command": "execute",
+        "skill": "DocumentOrganizer",
+        "uc": "UC-001",
+        "params": {
+          "grant_id": "INVALID-GRANT",
+          "role": "unauthorized_agent"
+        }
+      },
+      "expected": {
+        "status": "error",
+        "error_type": "UnauthorizedError"
+      }
+    },
+    {
+      "id": "TC-012-EDGE-TIMEOUT",
+      "description": "Timeout scenario for DocumentOrganizer 'Core Capabilities'",
+      "type": "edge",
+      "fr_ref": "NFR-004",
+      "scenario_ref": "TC-UC-001-ERR01",
+      "input": {
+        "command": "execute",
+        "skill": "DocumentOrganizer",
+        "uc": "UC-001",
+        "params": {
+          "timeout_ms": 1
+        }
+      },
+      "expected": {
+        "status": "timeout",
+        "error_type": "TimeoutError"
+      }
+    }
+  ]
+}
