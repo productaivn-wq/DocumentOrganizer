@@ -1,0 +1,41 @@
+{
+  "projects": {
+    "01": {
+      "name": "GENERAL_INBOX",
+      "folder": "01_GENERAL_INBOX"
+    },
+    "10": {
+      "name": "PRODUCT_PLATFORM",
+      "folder": "10_PRODUCT_PLATFORM"
+    },
+    "20": {
+      "name": "CLOUD_INFRASTRUCTURE",
+      "folder": "20_CLOUD_INFRASTRUCTURE"
+    },
+    "30": {
+      "name": "DATA_INTELLIGENCE",
+      "folder": "30_DATA_INTELLIGENCE"
+    },
+    "40": {
+      "name": "FIELD_RESEARCH",
+      "folder": "40_FIELD_RESEARCH"
+    },
+    "50": {
+      "name": "FLEET_OPERATIONS",
+      "folder": "50_FLEET_OPERATIONS"
+    },
+    "60": {
+      "name": "DEV_EXPERIENCE",
+      "folder": "60_DEV_EXPERIENCE"
+    }
+  },
+  "sequences": {
+    "01": 1,
+    "10": 1,
+    "20": 1,
+    "30": 1,
+    "40": 1,
+    "50": 1,
+    "60": 1
+  }
+}

@@ -1,0 +1,39 @@
+name: DocumentOrganizer Sync
+
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  sync-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          pip install pathlib
+
+      - name: Generate Visualization
+        run: |
+          python scripts/visualize.py --target . --output docs/visual_tree.md
+
+      - name: Update READMEs with Refresh
+        run: |
+          python scripts/readme_writer.py --target . --overwrite --scan-json scan.json
+
+      - name: Commit changes
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "github-actions"
+          git add docs/visual_tree.md README.md **/README.md
+          git commit -m "docs: sync directory visualization and READMEs [skip ci]" || exit 0
+          git push

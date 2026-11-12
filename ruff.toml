@@ -1,0 +1,12 @@
+line-length = 120
+target-version = "py310"
+exclude = [
+    "runs",
+    "templates",
+    ".pytest_cache",
+    ".ruff_cache",
+]
+
+[lint]
+select = ["E", "F", "W", "I"]
+ignore = ["E501", "E402"]
