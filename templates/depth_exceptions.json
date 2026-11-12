@@ -1,0 +1,7 @@
+{
+  "opaque_exceptions": [
+    "10_ACTIVE_TIMEBOUND/Project/source_tree",
+    "20_ACTIVE_CONTINUOUS/Operations/runtime_state",
+    "40_ARCHIVE/Legacy/snapshots"
+  ]
+}

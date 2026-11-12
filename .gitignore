@@ -1,0 +1,39 @@
+# Byte-compiled / caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+
+# Secrets, local env & runtime state
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pickle
+*.p12
+*.pfx
+
+# Ephemeral runtime logs, locks & binary models
+*.log
+*.lock
+.watch_supervisor.lock
+*.db
+*.sqlite
+*.sqlite3
+*.traineddata
+scratch/
+scratchpads/
+runs/
+results/
+observations/
+scan*.json
+dry_run_moves.json
+verification_report.json
